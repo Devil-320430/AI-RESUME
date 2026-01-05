@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Resume Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Resume Checker</h1>
+        <p>Upload your PDF resume and select a job role to get an ATS-friendly analysis.</p>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="resume">Upload Resume (PDF):</label>
+                <input type="file" id="resume" name="resume" accept=".pdf" required>
+            </div>
+            <div class="form-group">
+                <label for="role">Select Job Role:</label>
+                <select id="role" name="role" required>
+                    <option value="">Select a role</option>
+                    <option value="Web Developer">Web Developer</option>
+                    <option value="Data Scientist">Data Scientist</option>
+                    <option value="Software Engineer">Software Engineer</option>
+                    
+                </select>
+            </div>
+            <button type="submit" id="submitBtn">Analyze Resume</button>
+        </form>
+        <div id="loading" style="display: none;">Analyzing... Please wait.</div>
+        <div id="results"></div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
