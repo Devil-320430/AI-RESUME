@@ -58,4 +58,4 @@ A web application that analyzes resumes for ATS-friendliness, checks for missing
 
 ## Note
 
-If OpenAI API key is not set, the application will still work but will show a message instead of AI-generated suggestions.
+If Google API key is not set, the application will still work but will show a message instead of AI-generated suggestions.
